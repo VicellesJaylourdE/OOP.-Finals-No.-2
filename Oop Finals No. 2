@@ -1,0 +1,36 @@
+// Abstract class Pets
+abstract class Pets {
+    //7 Abstract method Color
+    public abstract String color();
+}
+
+// Subclass  Chicken extending Pets
+class Chicken extends Pets {
+    // Implementing Color method for Chicken
+    @Override
+    public String color() {
+        return "Brown";
+    }
+}
+
+// Subclass Rabbit extending Pets
+class Rabbit extends Pets {
+    // Implementing Color method for Rabbit
+    @Override
+    public String color() {
+        return "Gray";
+    }
+}
+
+// Main class for testing
+public class Main {
+    public static void main(String[] args) {
+        // Creating instances of Dog and Cat
+        Chicken myChicken = new Chicken();
+        Rabbit myRabbit= new Rabbit();
+
+        // Calling the Color method for each animal
+        System.out.println("My chicken is " + myChicken.color() + ".");
+        System.out.println("My rabbit is " + myRabbit.color() + ".");
+    }
+}
